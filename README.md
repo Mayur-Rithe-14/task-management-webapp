@@ -4,13 +4,13 @@ A modern full-stack task management application built with the MERN Stack (Mongo
 
 ---
 
-# 🌐 Live Demo
+## 🌐 Live Demo
 
 🔗 Live Website: https://taskflow-frontend.onrender.com
 
 ---
 
-# 📖 Overview
+## 📖 Overview
 
 TaskFlow is a full-stack task management platform designed to simplify task organization and productivity. Users can securely register and log in, create and manage tasks, track progress through different statuses, view analytics, and personalize their experience with dark mode support.
 
@@ -18,7 +18,7 @@ The application features JWT authentication, task analytics, search and filterin
 
 ---
 
-# ✨ Features
+## ✨ Features
 
 ### Authentication & Security
 
@@ -72,9 +72,9 @@ The application features JWT authentication, task analytics, search and filterin
 
 ---
 
-# 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-## Frontend
+### Frontend
 
 - React.js
 - Vite
@@ -83,7 +83,7 @@ The application features JWT authentication, task analytics, search and filterin
 - React Icons
 - CSS3
 
-## Backend
+### Backend
 
 - Node.js
 - Express.js
@@ -91,44 +91,26 @@ The application features JWT authentication, task analytics, search and filterin
 - BcryptJS
 - CORS
 
-## Database
+### Database
 
 - MongoDB
 - MongoDB Atlas
 - Mongoose
 
-## Development Tools
+### Development Tools
 
 - Git & GitHub
 - VS Code
 - Postman
 
-## Deployment
+### Deployment
 
 - Render (Frontend)
 - Render (Backend)
 
 ---
 
-# 🏗️ Application Architecture
-
-Frontend (React + Vite)
-
-        ↓
-
-REST API (Express.js)
-
-        ↓
-
-MongoDB Atlas Database
-
-        ↓
-
-JWT Authentication Layer
-
----
-
-# 📸 Screenshots
+## 📸 Screenshots
 
 ### Dashboard
 
@@ -145,33 +127,6 @@ JWT Authentication Layer
 ### Mobile View
 
 ![Mobile View](./screenshots/mobile.png)
-
----
-
-# 🗄️ Database Models
-
-## User Model
-
-```js
-{
-  name: String,
-  email: String,
-  password: String,
-  createdAt: Date
-}
-```
-
-## Task Model
-
-```js
-{
-  title: String,
-  description: String,
-  status: "Pending" | "In Progress" | "Completed",
-  user: ObjectId,
-  createdAt: Date
-}
-```
 
 ---
 
@@ -210,9 +165,9 @@ taskflow
 
 ---
 
-# 🚀 Getting Started
+## 🚀 Getting Started
 
-## Prerequisites
+### Prerequisites
 
 - Node.js (v18 or higher)
 - npm
@@ -221,7 +176,7 @@ taskflow
 
 ---
 
-## Clone Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/Mayur-Rithe-14/taskflow.git
@@ -231,7 +186,7 @@ cd taskflow
 
 ---
 
-## Backend Setup
+### Backend Setup
 
 ```bash
 cd server
@@ -261,7 +216,7 @@ http://localhost:5000
 
 ---
 
-## Frontend Setup
+### Frontend Setup
 
 ```bash
 cd client
@@ -289,16 +244,16 @@ http://localhost:5173
 
 ---
 
-# 📡 API Endpoints
+## API Endpoints
 
-## Authentication
+### Authentication
 
 ```http
 POST /api/auth/register
 POST /api/auth/login
 ```
 
-## Tasks
+### Tasks
 
 ```http
 GET    /api/tasks
@@ -308,7 +263,7 @@ DELETE /api/tasks/:id
 GET    /api/tasks/stats
 ```
 
-## Users
+### Users
 
 ```http
 GET /api/user/profile
@@ -317,9 +272,9 @@ PUT /api/user/profile
 
 ---
 
-# 🎨 Key Features Explained
+## 🎨 Key Features Explained
 
-## Task Dashboard
+### Task Dashboard
 
 Displays task statistics and task list in a clean dashboard layout.
 
@@ -334,7 +289,7 @@ Features include:
 
 ---
 
-## Analytics
+### Analytics
 
 Provides visual insights into task performance and completion rates.
 
@@ -346,7 +301,7 @@ Includes:
 
 ---
 
-## Task Management Workflow
+### Task Management Workflow
 
 Users can:
 
@@ -364,7 +319,7 @@ Pending → In Progress → Completed
 
 ---
 
-## Dark Mode
+### Dark Mode
 
 TaskFlow includes built-in dark mode support.
 
@@ -376,9 +331,9 @@ Benefits:
 
 ---
 
-# 🚀 Deployment
+## 🚀 Deployment
 
-## Frontend Deployment (Render)
+### Frontend Deployment (Render)
 
 Build Command:
 
@@ -400,7 +355,7 @@ VITE_API_URL=https://your-backend.onrender.com/api
 
 ---
 
-## Backend Deployment (Render)
+### Backend Deployment (Render)
 
 Build Command:
 
@@ -424,7 +379,7 @@ JWT_SECRET=your_secret_key
 
 ---
 
-# 🎯 Future Enhancements
+## 🎯 Future Enhancements
 
 - Task Categories & Tags
 - Task Deadlines
@@ -439,7 +394,7 @@ JWT_SECRET=your_secret_key
 
 ---
 
-# 🔒 Security Features
+## 🔒 Security Features
 
 - JWT Authentication
 - Password Hashing using BcryptJS
@@ -449,7 +404,7 @@ JWT_SECRET=your_secret_key
 
 ---
 
-# 📬 Contact
+## 📬 Contact
 
 ### Mayur Rithe
 
@@ -461,26 +416,6 @@ https://linkedin.com/in/mayur-rithe
 
 Portfolio:
 https://personal-portfolio-1-cqic.onrender.com
-
----
-
-# ⭐ Support
-
-If you found this project useful:
-
-⭐ Star the repository
-
-🔗 Share it with others
-
-💬 Provide feedback
-
-🐛 Report issues
-
----
-
-# 📄 License
-
-This project is licensed under the MIT License.
 
 ---
 

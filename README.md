@@ -112,21 +112,85 @@ The application features JWT authentication, task analytics, search and filterin
 
 ## 📸 Screenshots
 
-### Dashboard
+### Dashboard Preview
 
-![Dashboard](./screenshots/dashboard.png)
+<table>
+<tr>
+<td align="center" width="50%">
+<b>Light Mode</b><br><br>
+<img src="./screenshots/dashboard-light.png" width="100%">
+</td>
 
-### Analytics
+<td align="center" width="50%">
+<b>Dark Mode</b><br><br>
+<img src="./screenshots/dashboard-dark.png" width="100%">
+</td>
+</tr>
+</table>
 
-![Analytics](./screenshots/analytics.png)
+### Tasks Preview
 
-### Dark Mode
+<table>
+<tr>
+<td align="center" width="50%">
+<b>Light Mode</b><br><br>
+<img src="./screenshots/tasks-light.png" width="100%">
+</td>
 
-![Dark Mode](./screenshots/darkmode.png)
+<td align="center" width="50%">
+<b>Dark Mode</b><br><br>
+<img src="./screenshots/tasks-dark.png" width="100%">
+</td>
+</tr>
+</table>
 
-### Mobile View
+### Analytics Preview
 
-![Mobile View](./screenshots/mobile.png)
+<table>
+<tr>
+<td align="center" width="50%">
+<b>Light Mode</b><br><br>
+<img src="./screenshots/analytics-light.png" width="100%">
+</td>
+
+<td align="center" width="50%">
+<b>Dark Mode</b><br><br>
+<img src="./screenshots/analytics-dark.png" width="100%">
+</td>
+</tr>
+</table>
+
+### Detail Task Preview
+
+<table>
+<tr>
+<td align="center" width="50%">
+<b>Light Mode</b><br><br>
+<img src="./screenshots/detail-task-light.png" width="100%">
+</td>
+
+<td align="center" width="50%">
+<b>Dark Mode</b><br><br>
+<img src="./screenshots/detail-task-dark.png" width="100%">
+</td>
+</tr>
+</table>
+
+### Profile Preview
+
+<table>
+<tr>
+<td align="center" width="50%">
+<b>Light Mode</b><br><br>
+<img src="./screenshots/profile-light.png" width="100%">
+</td>
+
+<td align="center" width="50%">
+<b>Dark Mode</b><br><br>
+<img src="./screenshots/profile-dark.png" width="100%">
+</td>
+</tr>
+</table>
 
 ---
 

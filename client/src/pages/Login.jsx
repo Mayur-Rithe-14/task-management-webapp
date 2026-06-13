@@ -35,7 +35,7 @@ const Login = () => {
         }),
       );
 
-      navigate("/dashboard");
+      navigate("/dashboard", {replace: true});
     } catch (error) {
       console.log(error);
       alert("Invalid Credentials");

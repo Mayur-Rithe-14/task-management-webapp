@@ -36,9 +36,9 @@ const Sidebar = ({sidebarOpen, setSidebarOpen}) => {
         <nav className="menu">
           <div
             className={
-              location.pathname === "/" ? "menu-item active" : "menu-item"
+              location.pathname === "/dashboard" ? "menu-item active" : "menu-item"
             }
-            onClick={() => handleNavigate("/")}
+            onClick={() => handleNavigate("/dashboard")}
           >
             <FiHome />
             Dashboard

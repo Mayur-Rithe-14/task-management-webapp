@@ -1,0 +1,295 @@
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: white;
+  border-right: 1px solid #edf2f7;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 45px;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #6c63ff;
+  color: #6c63ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.logo h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Menu */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid #dbe4f0;
+  border-radius: 14px;
+  color: #64748b;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.menu-item svg {
+  font-size: 18px;
+}
+
+.menu-item:hover {
+  background: #f8fafc;
+  color: #6c63ff;
+}
+
+.active {
+  background: #f3f1ff;
+  color: #6c63ff;
+  border-color: #6c63ff;
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.15);
+}
+
+/* Footer */
+
+.sidebar-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* User Card */
+
+.user-card {
+  border: 1px solid #dbe4f0;
+  border-radius: 18px;
+  padding: 14px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.25s ease;
+}
+
+.user-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #6c63ff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #0f172a;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Logout */
+
+.logout-btn {
+  width: 100%;
+  border: none;
+  background: #fff1f2;
+  color: #e11d48;
+  padding: 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.logout-btn:hover {
+  background: #e11d48;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Overlay */
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(2px);
+  z-index: 999;
+}
+
+/* Scrollbar */
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #dbe4f0;
+  border-radius: 20px;
+}
+
+.sidebar {
+  box-shadow: 4px 0 30px rgba(0, 0, 0, 0.04);
+}
+
+/* DARK MODE SIDEBAR */
+
+body.dark-mode .sidebar {
+  background: #0f172a;
+  border-right: 1px solid #1e293b;
+  box-shadow: 4px 0 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .logo h2 {
+  color: #f8fafc;
+}
+
+body.dark-mode .logo-icon {
+  border-color: #6c63ff;
+  color: #6c63ff;
+}
+
+body.dark-mode .menu-item {
+  background: transparent;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+}
+
+body.dark-mode .menu-item:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+body.dark-mode .active {
+  background: #6c63ff;
+  border-color: #6c63ff;
+  color: white;
+}
+
+body.dark-mode .active svg {
+  color: white;
+}
+
+/* User Card */
+
+body.dark-mode .user-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+body.dark-mode .user-info h4 {
+  color: white;
+}
+
+body.dark-mode .user-info p {
+  color: #94a3b8;
+}
+
+/* Logout */
+
+body.dark-mode .logout-btn {
+  background: #991b1b;
+  color: white;
+}
+
+body.dark-mode .logout-btn:hover {
+  background: #991b1b;
+}
+
+/* Scrollbar */
+
+body.dark-mode .sidebar::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 240px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 275px;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .logo {
+    margin-bottom: 30px;
+  }
+
+  .logo h2 {
+    font-size: 20px;
+  }
+
+  .menu-item {
+    padding: 12px;
+  }
+
+  .user-card {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,63 @@
+.task-table-wrapper {
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.task-table th,
+.task-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.task-table th {
+  background: #f9fafb;
+  color: #374151;
+  font-weight: 600;
+}
+
+.task-table tr:last-child td {
+  border-bottom: none;
+}
+
+.task-table tbody tr {
+  transition: 0.25s;
+}
+
+.task-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .task-table th,
+  .task-table td {
+    padding: 14px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .task-table {
+    min-width: 600px;
+  }
+
+  .task-table th,
+  .task-table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+}

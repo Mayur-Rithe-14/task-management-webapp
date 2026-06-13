@@ -1,0 +1,68 @@
+.stats-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(108, 99, 255, 0.08);
+}
+
+.stats-card-title {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.stats-card-value {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .stats-card {
+    padding: 18px;
+  }
+
+  .stats-card-value {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .stats-card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .stats-card-title {
+    font-size: 0.9rem;
+  }
+
+  .stats-card-value {
+    font-size: 1.6rem;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .stats-card {
+    padding: 14px;
+  }
+
+  .stats-card-title {
+    font-size: 0.85rem;
+  }
+
+  .stats-card-value {
+    font-size: 1.4rem;
+  }
+}

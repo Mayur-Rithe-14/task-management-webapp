@@ -231,12 +231,13 @@ taskflow
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### Requirement
 
 - Node.js (v18 or higher)
 - npm
 - MongoDB Atlas Account
 - Git
+- GitHub 
 
 ---
 

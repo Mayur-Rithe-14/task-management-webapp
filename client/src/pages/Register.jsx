@@ -44,6 +44,11 @@ const Register = () => {
         {/* LEFT FORM */}
 
         <div className="auth-form-section">
+          <div className="mobile-auth-header">
+            <div className="mobile-logo">✓</div>
+            <h1>TaskFlow</h1>
+            <p>Manage tasks, track progress and stay productive every day.</p>
+          </div>
           <div className="auth-card">
             <h2>Create Account</h2>
             <p>Join TaskFlow today</p>

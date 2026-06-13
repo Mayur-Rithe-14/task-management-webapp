@@ -522,9 +522,6 @@ body,
     height: 100;
   }
 
-  .auth-form-section {
-    margin: 200px 0;
-  }
   .auth-card {
     max-width: 300px;
     padding: 18px;

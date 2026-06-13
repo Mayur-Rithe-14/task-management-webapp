@@ -26,7 +26,7 @@ const Register = () => {
     try {
       await API.post("/auth/register", formData);
 
-      navigate("/login");
+      navigate("/login", {replace: true});
     } catch (error) {
       console.log(error);
     }

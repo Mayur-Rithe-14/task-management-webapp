@@ -130,7 +130,7 @@ The application features JWT authentication, task analytics, search and filterin
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
 taskflow

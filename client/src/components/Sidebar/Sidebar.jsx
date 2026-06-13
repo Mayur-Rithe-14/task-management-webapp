@@ -2,13 +2,13 @@ import "./Sidebar.css";
 import {FiHome, FiClipboard, FiBarChart2, FiLogOut} from "react-icons/fi";
 import {useNavigate, useLocation} from "react-router-dom";
 
-const logout = () => {
-  localStorage.clear();
-  window.location.href = "/login";
-};
-
 const Sidebar = ({sidebarOpen, setSidebarOpen}) => {
   const navigate = useNavigate();
+
+  const logout = () => {
+    localStorage.clear();
+    navigate("/login", {replace: true});
+  };
   const location = useLocation();
   const user = JSON.parse(localStorage.getItem("user")) || {};
   const handleNavigate = (path) => {

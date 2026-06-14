@@ -7,6 +7,8 @@ import "../Styles/Auth.css";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     email: "",
@@ -23,6 +25,9 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    setError("");
+    setLoading(true);
+
     try {
       const {data} = await API.post("/auth/login", formData);
 
@@ -38,8 +43,9 @@ const Login = () => {
 
       navigate("/dashboard", {replace: true});
     } catch (error) {
-      console.log(error);
-      alert("Invalid Credentials");
+      setError(error.response?.data?.message || "Invalid email or password");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -56,7 +62,6 @@ const Login = () => {
           <div className="banner-content">
             <div className="banner-logo">
               <div className="banner-logo-icon">✓</div>
-
               <div>
                 <h3>TaskFlow</h3>
                 <span>Welcome to TaskFlow</span>
@@ -126,6 +131,8 @@ const Login = () => {
             <h2>Login</h2>
             <p>Access your TaskFlow workspace</p>
 
+            {error && <div className="auth-error">{error}</div>}
+
             <form onSubmit={handleSubmit}>
               <div className="input-group">
                 <FaEnvelope className="input-icon" />
@@ -135,6 +142,7 @@ const Login = () => {
                   name="email"
                   placeholder="Email Address"
                   onChange={handleChange}
+                  disabled={loading}
                   required
                 />
               </div>
@@ -147,11 +155,14 @@ const Login = () => {
                   name="password"
                   placeholder="Password"
                   onChange={handleChange}
+                  disabled={loading}
                   required
                 />
               </div>
 
-              <button type="submit">Login</button>
+              <button type="submit" disabled={loading}>
+                {loading ? "Logging in..." : "Login"}
+              </button>
             </form>
 
             <div className="auth-link">

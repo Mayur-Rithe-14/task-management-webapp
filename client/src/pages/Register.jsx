@@ -8,6 +8,10 @@ import "../Styles/Auth.css";
 const Register = () => {
   const navigate = useNavigate();
 
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,12 +28,25 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    setError("");
+    setSuccess("");
+    setLoading(true);
+
     try {
       await API.post("/auth/register", formData);
 
-      navigate("/login", {replace: true});
+      setSuccess("Account created successfully! Redirecting...");
+
+      setTimeout(() => {
+        navigate("/login", {replace: true});
+      }, 1500);
     } catch (error) {
-      console.log(error);
+      setError(
+        error.response?.data?.message ||
+          "Registration failed. Please try again.",
+      );
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -53,6 +70,9 @@ const Register = () => {
             <h2>Create Account</h2>
             <p>Join TaskFlow today</p>
 
+            {error && <div className="auth-error">{error}</div>}
+            {success && <div className="auth-success">{success}</div>}
+
             <form onSubmit={handleSubmit}>
               <div className="input-group">
                 <FaUser className="input-icon" />
@@ -60,6 +80,7 @@ const Register = () => {
                 <input
                   type="text"
                   name="name"
+                  disabled={loading}
                   placeholder="Full Name"
                   onChange={handleChange}
                   required
@@ -72,6 +93,7 @@ const Register = () => {
                 <input
                   type="email"
                   name="email"
+                  disabled={loading}
                   placeholder="Email Address"
                   onChange={handleChange}
                   required
@@ -84,13 +106,16 @@ const Register = () => {
                 <input
                   type="password"
                   name="password"
+                  disabled={loading}
                   placeholder="Password"
                   onChange={handleChange}
                   required
                 />
               </div>
 
-              <button type="submit">Register</button>
+              <button type="submit" disabled={loading}>
+                {loading ? "Creating Account..." : "Register"}
+              </button>
             </form>
 
             <div className="auth-link">

@@ -7,13 +7,40 @@ body,
   height: 100%;
 }
 
+.auth-error {
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 12px;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.auth-success {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #22c55e;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 12px;
+}
+
 .auth-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #eef2ff 0%, #f8faff 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
 }
 
 /* ONE BIG CARD */
@@ -398,28 +425,44 @@ body,
 /* TABLET & MOBILE */
 
 @media (max-width: 768px) {
+  .auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 16px;
+  }
+
   .auth-main-card {
-    flex-direction: column;
-    width: 95%;
+    width: 100%;
     min-height: auto;
+    flex-direction: column;
+    border-radius: 24px;
   }
 
   .auth-banner {
     display: none;
   }
 
-  .auth-card {
-    max-width: 100%;
+  .auth-form-section {
     width: 100%;
-    padding: 30px;
+    padding: 0;
+  }
+
+  .auth-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 32px 24px;
+    box-sizing: border-box;
   }
 
   .auth-card h2 {
-    font-size: 32px;
+    font-size: 2rem;
+    text-align: center;
   }
 
   .auth-card p {
-    font-size: 15px;
+    text-align: center;
   }
 
   .input-group {
@@ -428,27 +471,41 @@ body,
 
   .auth-card input {
     width: 100%;
-    height: 54px;
-    padding-left: 48px;
-    font-size: 15px;
-  }
-
-  .input-icon {
-    left: 16px;
-    font-size: 15px;
+    height: 56px;
+    font-size: 16px;
   }
 
   .auth-card button {
     width: 100%;
-    height: 54px;
-    font-size: 15px;
+    height: 56px;
+    font-size: 16px;
+  }
+
+  .mobile-logo {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 16px;
+
+    background: linear-gradient(135deg, #6c63ff, #8b5cf6);
+    color: white;
+
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    font-weight: bold;
   }
 }
-
 /* VERY SMALL PHONES */
 
 @media (max-width: 480px) {
   .auth-main-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     border-radius: 20px;
   }

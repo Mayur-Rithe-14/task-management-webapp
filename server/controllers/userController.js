@@ -6,9 +6,7 @@ import bcrypt from "bcryptjs";
 export const updateProfile = async (req, res) => {
   try {
     const {name, email} = req.body;
-
     const user = await User.findById(req.user.id);
-
     user.name = name || user.name;
     user.email = email || user.email;
 
@@ -31,9 +29,7 @@ export const updateProfile = async (req, res) => {
 export const changePassword = async (req, res) => {
   try {
     const {currentPassword, newPassword} = req.body;
-
     const user = await User.findById(req.user.id);
-
     const isMatch = await bcrypt.compare(currentPassword, user.password);
 
     if (!isMatch) {
@@ -43,7 +39,6 @@ export const changePassword = async (req, res) => {
     }
 
     const salt = await bcrypt.genSalt(10);
-
     user.password = await bcrypt.hash(newPassword, salt);
 
     await user.save();

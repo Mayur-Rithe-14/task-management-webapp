@@ -35,7 +35,7 @@ const Register = () => {
 
   return (
     <motion.div
-      className="auth-page"
+      className="auth-page register-page"
       initial={{opacity: 0, x: 80}}
       animate={{opacity: 1, x: 0}}
       transition={{duration: 0.5}}

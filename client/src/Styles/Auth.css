@@ -19,6 +19,14 @@ body,
   padding: 30px;
 }
 
+.auth-page .register-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
 /* ONE BIG CARD */
 
 .auth-main-card {

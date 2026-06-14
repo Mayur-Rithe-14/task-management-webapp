@@ -35,8 +35,8 @@ const Register = () => {
 
   return (
     <motion.div
-      className="auth-page register-page"
-      initial={{opacity: 0, x: -80}}
+      className="auth-page"
+      initial={{opacity: 0, x: 80}}
       animate={{opacity: 1, x: 0}}
       transition={{duration: 0.5}}
     >
@@ -44,12 +44,12 @@ const Register = () => {
         {/* LEFT FORM */}
 
         <div className="auth-form-section">
-          <div className="mobile-auth-header">
-            <div className="mobile-logo">✓</div>
-            <h1>TaskFlow</h1>
-            <p>Manage tasks, track progress and stay productive every day.</p>
-          </div>
           <div className="auth-card">
+            <div className="mobile-auth-header">
+              <div className="mobile-logo">✓</div>
+              <h1>TaskFlow</h1>
+              <p>Manage tasks, track progress and stay productive every day.</p>
+            </div>
             <h2>Create Account</h2>
             <p>Join TaskFlow today</p>
 
